@@ -1,0 +1,12 @@
+pet-care-consultant-trae-v2.0.0.zip 发布清单（2026-10-30，本文件故意不打包进 ZIP）
+SHA-256: 11bd140e5aa8e2e779891800d82ce2f9e583b69e4181c45e9020db2f82528233
+bytes: 1201313
+files: 62
+agent version: 2.0.0
+
+复核命令（Windows PowerShell）：
+  Get-FileHash -Algorithm SHA256 dist\pet-care-consultant-trae-v2.0.0.zip
+  python tools/verify_release.py
+  # 解压副本内： node --test companion/*.test.mjs   期望 5/5
+
+为什么哈希不写进包内文档：改一次文档就会改变 ZIP 内容，包里那个哈希值当场失效（自指）。

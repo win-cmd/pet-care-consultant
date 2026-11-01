@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff4f7">
+  <title>养宠顾问 · 动态宠物</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <div>
+        <p class="eyebrow">PET CARE COMPANION</p>
+        <h1>养宠顾问的二次元搭档</h1>
+        <p class="subtitle">在 Trae 里咨询，在这里看见毛孩子的情绪与风险示意。</p>
+      </div>
+      <div class="connection-wrap">
+        <span id="connection" class="connection">正在连接</span>
+        <span id="latency" class="latency">本地运行</span>
+      </div>
+    </header>
+
+    <div class="layout">
+      <section class="pet-card" aria-label="动态宠物演示">
+        <div id="notice" class="notice" data-severity="normal">
+          <strong id="state-label">平静陪伴</strong>
+          <span id="pet-message">我会陪你一起照顾毛孩子。</span>
+        </div>
+
+        <div id="stage" class="stage" data-pet="dog" data-state="idle">
+          <div class="spark spark-one"></div>
+          <div class="spark spark-two"></div>
+          <div class="spark spark-three"></div>
+          <div class="speech" id="speech">今天也要科学养宠哦</div>
+          <svg class="pet-svg" viewBox="0 0 360 310" role="img" aria-labelledby="pet-title pet-desc">
+            <title id="pet-title">动态小狗</title>
+            <desc id="pet-desc">一只可爱的二次元小狗，当前状态为平静陪伴</desc>
+            <defs>
+              <linearGradient id="fur-gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#fff8ed"/>
+                <stop offset="1" stop-color="#f2c99d"/>
+              </linearGradient>
+              <linearGradient id="cat-fur-gradient" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f7f2ff"/>
+                <stop offset="1" stop-color="#c9b9ed"/>
+              </linearGradient>
+              <filter id="soft-shadow" x="-30%" y="-30%" width="160%" height="160%">
+                <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#a87587" flood-opacity=".18"/>
+              </filter>
+            </defs>
+
+            <ellipse class="ground-shadow" cx="180" cy="264" rx="100" ry="17"/>
+            <g class="ghost critical-only">
+              <path d="M267 31c-20 0-34 15-34 34v45l11-9 11 9 11-9 11 9 11-9 10 9V65c0-19-14-34-34-34z" fill="#fff" stroke="#b9a8db" stroke-width="4"/>
+              <circle cx="255" cy="61" r="4" fill="#77658f"/>
+              <circle cx="278" cy="61" r="4" fill="#77658f"/>
+              <path d="M259 78q8-7 16 0" fill="none" stroke="#77658f" stroke-width="3" stroke-linecap="round"/>
+            </g>
+
+            <g class="pet-wrap" filter="url(#soft-shadow)">
+              <g class="tail dog-only">
+                <path d="M236 202c68-6 78-65 42-75-20-6-32 12-19 25" fill="none" stroke="#e7b882" stroke-width="25" stroke-linecap="round"/>
+              </g>
+              <g class="tail cat-only">
+                <path d="M235 204c73 8 89-59 55-84-20-15-45 1-35 24 7 15 29 9 28-5" fill="none" stroke="#b7a3dd" stroke-width="19" stroke-linecap="round"/>
+              </g>
+
+              <ellipse class="fur body" cx="180" cy="202" rx="80" ry="59"/>
+              <ellipse class="fur paw paw-left" cx="133" cy="243" rx="35" ry="20"/>
+              <ellipse class="fur paw paw-right" cx="227" cy="243" rx="35" ry="20"/>
+              <path class="paw-lines" d="M124 241v9m10-10v10m84-9v9m10-10v10"/>
+
+              <g class="head">
+                <g class="ears dog-only">
+                  <path d="M115 63C83 46 66 72 78 119c7 29 29 38 47 17z" fill="#b77b55"/>
+                  <path d="M245 63c32-17 49 9 37 56-7 29-29 38-47 17z" fill="#b77b55"/>
+                </g>
+                <g class="ears cat-only">
+                  <path d="M111 84L99 20l61 35z" fill="#b7a3dd" stroke="#9c86c8" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M249 84l12-64-61 35z" fill="#b7a3dd" stroke="#9c86c8" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M113 62l-6-28 30 20zM247 62l6-28-30 20z" fill="#f2a9bc"/>
+                </g>
+
+                <ellipse class="fur face" cx="180" cy="119" rx="86" ry="78"/>
+                <path class="dog-only face-patch" d="M181 44c-32 3-52 19-55 42 18 10 39 6 55-10z" fill="#e5b37e" opacity=".72"/>
+                <path class="cat-only forehead-lines" d="M164 53l5 17m11-19v18m16-16-5 17"/>
+
+                <g class="normal-eyes">
+                  <g class="eye eye-left">
+                    <ellipse cx="147" cy="119" rx="17" ry="24" fill="#403345"/>
+                    <ellipse cx="141" cy="110" rx="6" ry="8" fill="#fff"/>
+                    <circle cx="154" cy="128" r="3" fill="#fff" opacity=".85"/>
+                  </g>
+                  <g class="eye eye-right">
+                    <ellipse cx="213" cy="119" rx="17" ry="24" fill="#403345"/>
+                    <ellipse cx="207" cy="110" rx="6" ry="8" fill="#fff"/>
+                    <circle cx="220" cy="128" r="3" fill="#fff" opacity=".85"/>
+                  </g>
+                </g>
+
+                <g class="sleep-only closed-eyes">
+                  <path d="M130 119q17 17 34 0M196 119q17 17 34 0"/>
+                </g>
+                <g class="critical-only x-eyes">
+                  <path d="M133 105l28 28m0-28-28 28M199 105l28 28m0-28-28 28"/>
+                </g>
+                <g class="worried-only brows">
+                  <path d="M130 91l28 8M230 91l-28 8"/>
+                </g>
+
+                <ellipse class="blush" cx="119" cy="153" rx="17" ry="9"/>
+                <ellipse class="blush" cx="241" cy="153" rx="17" ry="9"/>
+                <path class="nose" d="M169 143q11-9 22 0-2 14-11 14t-11-14z"/>
+                <path class="mouth normal-mouth" d="M180 156v7m0 0q-13 15-25 0m25 0q13 15 25 0"/>
+                <path class="happy-only happy-mouth" d="M157 158q23 35 46 0z"/>
+                <path class="worried-only worried-mouth" d="M163 170q17-17 34 0"/>
+
+                <g class="cat-only whiskers">
+                  <path d="M116 145l-43-10m44 23-46 4m173-17 43-10m-44 23 46 4"/>
+                </g>
+              </g>
+
+              <path class="collar" d="M119 172q61 29 122 0l-5 22q-56 25-112 0z"/>
+              <circle class="tag" cx="180" cy="199" r="13"/>
+              <path class="tag-star" d="M180 190l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z"/>
+            </g>
+
+            <g class="happy-only hearts">
+              <path d="M74 70c-14-18-39 4 0 32 39-28 14-50 0-32z"/>
+              <path d="M285 128c-11-15-31 3 0 25 31-22 11-40 0-25z"/>
+            </g>
+            <g class="curious-only question">
+              <text x="273" y="74">?</text>
+              <circle cx="270" cy="91" r="3"/>
+            </g>
+            <g class="worried-only sweat">
+              <path d="M268 75c18 22 14 34 2 34s-16-12-2-34z"/>
+            </g>
+            <g class="sleep-only sleep-letters">
+              <text x="267" y="73">Z</text>
+              <text x="287" y="48">Z</text>
+            </g>
+          </svg>
+          <div class="risk-stamp critical-only">风险示意 · 不是死亡诊断</div>
+        </div>
+      </section>
+
+      <aside class="controls" aria-label="宠物演示控制">
+        <section>
+          <h2>选择搭档</h2>
+          <div class="segmented" role="group" aria-label="选择猫或狗">
+            <button type="button" data-pet-choice="dog" aria-pressed="true">小狗</button>
+            <button type="button" data-pet-choice="cat" aria-pressed="false">小猫</button>
+          </div>
+        </section>
+
+        <section>
+          <h2>状态演示</h2>
+          <div id="state-buttons" class="state-buttons"></div>
+        </section>
+
+        <section class="playback">
+          <button id="sound-toggle" type="button" class="primary">开启声音</button>
+          <button id="motion-toggle" type="button" aria-pressed="false">减少动态</button>
+          <p id="sound-hint" class="hint">浏览器要求先点击一次，之后才能播放叫声。</p>
+        </section>
+
+        <section class="local-note">
+          <h2>联动方式</h2>
+          <p>Trae 发送本地事件，页面实时接收。无需 API Key，也不会把对话上传到宠物服务。</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>

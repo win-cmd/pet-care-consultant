@@ -1,0 +1,1 @@
+﻿C:\Users\邓慧婷\AppData\Local\Microsoft\WindowsApps;;C:\Program Files\JetBrains\PyCharm 2024.3\bin;;D:\Program Files\JetBrains\PyCharm Community Edition 2024.3\bin;;C:\Users\邓慧婷\AppData\Roaming\npm
